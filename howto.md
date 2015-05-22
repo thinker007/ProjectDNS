@@ -27,10 +27,15 @@ vi /etc/sniproxy.conf
 修改为：
 
 user daemon
+
 pidfile /var/run/sniproxy.pid
+
 error_log {
+
     syslog daemon
+    
     priority notice
+    
 }
 
 listen 80 {
