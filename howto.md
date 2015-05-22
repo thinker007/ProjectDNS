@@ -27,19 +27,16 @@ vi /etc/sniproxy.conf
 修改为：
 
 user daemon
-# PID file
 pidfile /var/run/sniproxy.pid
 error_log {
-    # Log to the daemon syslog facility
     syslog daemon
-    # Alternatively we could log to file
-    #filename /var/log/sniproxy/sniproxy.log
-    # Control the verbosity of the log
     priority notice
 }
+
 listen 80 {
     proto http
 }
+
 listen 443 {
     proto tls
 }
